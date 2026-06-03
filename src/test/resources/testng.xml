@@ -1,0 +1,10 @@
+<!-- Archivo de suite TestNG que define las clases a ejecutar -->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+        <suite name="API Test Suite"> <!-- define el nombre de la suite -->
+        <test name="API Tests"> <!-- define un test agrupado llamado API Tests -->
+        <classes> <!-- comienza la lista de clases a ejecutar -->
+        <class name="tests.ApiHealthTest"/> <!-- indica la clase de prueba a ejecutar -->
+        <class name="tests.PostApiTest"/> <!-- indica la clase de prueba a ejecutar -->
+        </classes> <!-- fin de la lista de clases -->
+        </test> <!-- fin del test -->
+        </suite> <!-- fin de la suite -->
