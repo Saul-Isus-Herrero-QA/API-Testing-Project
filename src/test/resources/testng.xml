@@ -1,11 +1,15 @@
 <!-- Archivo de suite TestNG que define las clases a ejecutar -->
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-        <suite name="API Test Suite"> <!-- define el nombre de la suite -->
-        <test name="API Tests"> <!-- define un test agrupado llamado API Tests -->
-        <classes> <!-- comienza la lista de clases a ejecutar -->
-        <class name="tests.ApiHealthTest"/> <!-- indica clases de prueba a ejecutar -->
-        <class name="tests.PostApiTest"/>
-        <class name="tests.DataDrivenPostTest"/>
-        </classes> <!-- fin de la lista de clases -->
-        </test> <!-- fin del test -->
-        </suite> <!-- fin de la suite -->
+<suite name="API Test Suite">
+    <listeners>
+        <!-- Listener de Allure para capturar los resultados de los tests -->
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+    <test name="API Tests">
+        <classes>
+            <class name="tests.ApiHealthTest"/>
+            <class name="tests.PostApiTest"/>
+            <class name="tests.DataDrivenPostTest"/>
+        </classes>
+    </test>
+</suite>

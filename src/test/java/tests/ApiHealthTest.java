@@ -1,11 +1,7 @@
 package tests; // paquete donde estarán los tests
 
 import base.BaseTest; // importa la clase base con la configuración común
-import io.qameta.allure.Description; // reporting allure
 import io.qameta.allure.Feature;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Story;
 import org.testng.annotations.Test; // importa la anotación Test de TestNG
 
 import static io.restassured.RestAssured.*; // importa métodos estáticos de RestAssured para given/when/then
