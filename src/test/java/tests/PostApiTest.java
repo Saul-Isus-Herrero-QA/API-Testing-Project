@@ -79,19 +79,17 @@ public class PostApiTest extends BaseTest {
         actualizarPostConId(1);
         validarActualizarPost(1);
     }
-
-    private Response response;        // ✅ opcional pero recomendable
-
+    private Response response;
     @Step("Actualizar post con ID {postId}")
     private void actualizarPostConId(int postId) {
         body = new HashMap<>();
 
-        body.put("id", postId);  // ✅ usar parámetro
+        body.put("id", postId);  // se usa el parámetro del este metodo para mantener el mismo ID.
         body.put("title", "Titulo Actualizado");
         body.put("body", "Contenido Actualizado");
         body.put("userId", 1);
 
-        // ✅ Ejecutar el PUT aquí (mejor práctica)
+        //  Se ejecuta el PUT (actualización total de un post o registro.
         response = apiClient.put("/posts/" + postId, body);
     }
 

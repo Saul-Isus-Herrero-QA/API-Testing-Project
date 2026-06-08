@@ -13,13 +13,13 @@ import static org.hamcrest.Matchers.*;
 // Test data-driven: crea posts usando los datos del CSV
 @Feature("Posts Management - Data Driven")
 public class DataDrivenPostTest extends BaseTest {
-
+    // Crea una variable de tipo ApiClient
     private ApiClient apiClient;
 
     @BeforeClass
     public void setup() {
         super.setup(); // configura RestAssured desde BaseTest
-        apiClient = new ApiClient(); // instancia del cliente reusable
+        apiClient = new ApiClient(); // nueva instancia del cliente reusable
     }
 
     // Usa DataProvider definido en utils.CSVDataProvider
@@ -40,7 +40,7 @@ public class DataDrivenPostTest extends BaseTest {
         // Log del caso de prueba ejecutado
         Allure.step("POST /posts con título: " + title);
 
-        // Aserciones adicionales (por si no hicimos validación del código dentro del client)
+        // Aseerts en la respuesta de la petición de POST
         response.then()
                 .body("title", equalTo(title))
                 .body("body", equalTo(body))
