@@ -4,7 +4,7 @@
 This project is a test automation framework for API testing, built using mainly Java.
 It focuses on validating RESTful services by automating requests, responses, and business logic validations using a scalable and maintainable structure.
 
-## Tech Stack
+## Tech Stack.
 
 - **Language:** Java  
 - **API Testing:** Rest Assured  
