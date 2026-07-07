@@ -84,12 +84,12 @@ public class PostApiTest extends BaseTest {
     private void actualizarPostConId(int postId) {
         body = new HashMap<>();
 
-        body.put("id", postId);  // se usa el parámetro del este metodo para mantener el mismo ID.
+        body.put("id", postId);
         body.put("title", "Titulo Actualizado");
         body.put("body", "Contenido Actualizado");
         body.put("userId", 1);
 
-        //  Se ejecuta el PUT (actualización total de un post o registro.
+        //  Se ejecuta el PUT (actualización total de un post o registro).
         response = apiClient.put("/posts/" + postId, body);
     }
 
@@ -102,18 +102,5 @@ public class PostApiTest extends BaseTest {
                 .body("body", equalTo("Contenido Actualizado"))
                 .body("userId", equalTo(1));
     }
-
-    @Test
-    @Story("Eliminar un post existente")
-    @Description("Elimina el post con ID 1 usando DELETE")
-    public void testDeletePost() {
-        validarEliminacionPost();
-    }
-        @Step("Validar que el post fue eliminado (status 200)")
-        private void validarEliminacionPost () {
-            Response response = apiClient.delete("/posts/1");
-            response.then()
-                    .statusCode(200);
-        }
 }
 

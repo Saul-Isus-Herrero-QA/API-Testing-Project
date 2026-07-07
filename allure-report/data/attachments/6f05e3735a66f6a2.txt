@@ -1,0 +1,6 @@
+{
+  "title": "Nuevo Post 2",
+  "body": "Contenido del test 2",
+  "userId": 2,
+  "id": 101
+}

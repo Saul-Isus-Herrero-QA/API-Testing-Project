@@ -1,0 +1,6 @@
+"BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
+"0","","0","Health Check","1","0","","0"
+"0","","0","Posts Management","1","0","Crear un nuevo post","0"
+"0","","0","Posts Management - Data Driven","3","0","Crear posts desde CSV","0"
+"0","","0","Posts Management","1","0","Obtener un post existente","0"
+"0","","0","Posts Management","1","0","Actualizar un post existente","0"

@@ -1,0 +1,8 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1860","healthCheck","API Test Suite","2026-06-23","passed","2026-06-23","tests.ApiHealthTest","API Tests","tests.ApiHealthTest","healthCheck"
+"Crea un nuevo post y valida que se retorna código 201","673","testCreatePost","API Test Suite","2026-06-23","passed","2026-06-23","tests.PostApiTest","API Tests","tests.PostApiTest","testCreatePost"
+"Crea posts usando los datos del archivo CSV","255","createPostsDataDriven","Default Suite","2026-06-23","passed","2026-06-23","tests.DataDrivenPostTest","API-Testing-Project","tests.DataDrivenPostTest","createPostsDataDriven"
+"Obtiene el post con ID 1 y valida sus campos","140","testGetPost","API Test Suite","2026-06-23","passed","2026-06-23","tests.PostApiTest","API Tests","tests.PostApiTest","testGetPost"
+"Crea posts usando los datos del archivo CSV","396","createPostsDataDriven","Default Suite","2026-06-23","passed","2026-06-23","tests.DataDrivenPostTest","API-Testing-Project","tests.DataDrivenPostTest","createPostsDataDriven"
+"Crea posts usando los datos del archivo CSV","4051","createPostsDataDriven","Default Suite","2026-06-23","passed","2026-06-23","tests.DataDrivenPostTest","API-Testing-Project","tests.DataDrivenPostTest","createPostsDataDriven"
+"Actualiza el post con ID 1 completamente (PUT)","480","testUpdatePost","API Test Suite","2026-06-23","passed","2026-06-23","tests.PostApiTest","API Tests","tests.PostApiTest","testUpdatePost"

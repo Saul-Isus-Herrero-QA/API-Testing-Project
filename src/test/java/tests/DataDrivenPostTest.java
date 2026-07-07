@@ -10,7 +10,7 @@ import utils.CSVDataProvider;
 
 import static org.hamcrest.Matchers.*;
 
-// Test data-driven: crea posts usando los datos del CSV
+// Test data-driven: crea posts usando los datos del CSV, este tag es para poder hacer api testing.
 @Feature("Posts Management - Data Driven")
 public class DataDrivenPostTest extends BaseTest {
     // Crea una variable de tipo ApiClient
@@ -40,7 +40,7 @@ public class DataDrivenPostTest extends BaseTest {
         // Log del caso de prueba ejecutado
         Allure.step("POST /posts con título: " + title);
 
-        // Aseerts en la respuesta de la petición de POST
+        // Asserts en la respuesta de la petición de POST
         response.then()
                 .body("title", equalTo(title))
                 .body("body", equalTo(body))

@@ -7,6 +7,9 @@ import utils.ConfigReader; // importa el lector de configuración
 import static io.restassured.RestAssured.*; // importa métodos estáticos de RestAssured
 
 // Clase cliente que encapsula métodos reutilizables para realizar peticiones HTTP
+// Saúl Isús Herrero.
+// 3 de Julio del 2026.
+// Entorno : API de pruebas https://jsonplaceholder.typicode.com
 public class ApiClient {
     public Response get(String endpoint) { // recibe la ruta del endpoint
         return given() // inicia la construcción de petición
@@ -17,27 +20,6 @@ public class ApiClient {
                 .then() // inicia la sección de validación
                 .log().all() // registra la respuesta completa en consola
                 .extract().response(); // extrae y retorna la respuesta como objeto Response
-    }
-    public Response getWithStatusCode(String endpoint, int expectedStatus) { // recibe endpoint y código esperado
-        return given() // inicia la construcción de petición
-                .log().all() // registra la petición completa en consola
-                .when() // indica la sección de ejecución
-                .get(endpoint) // realiza GET al endpoint
-                .then() // inicia la sección de validación
-                .log().all() // registra la respuesta en consola
-                .statusCode(expectedStatus) // valida que el código de estado sea el esperado
-                .extract().response(); // extrae y retorna la respuesta
-    }
-    public Response post(String endpoint, String body) { // recibe endpoint y cuerpo en formato JSON string
-        return given() // inicia la construcción de petición
-                .log().all() // registra la petición en consola
-                .contentType(ContentType.JSON) // especifica que el cuerpo es JSON
-                .body(body) // asigna el cuerpo a la petición
-                .when() // indica la sección de ejecución
-                .post(endpoint) // realiza POST al endpoint
-                .then() // inicia la sección de validación
-                .log().all() // registra la respuesta en consola
-                .extract().response(); // extrae y retorna la respuesta
     }
     public Response postWithStatusCode(String endpoint, Object body, int expectedStatus) { // recibe endpoint, cuerpo y código esperado
         return given() // inicia la construcción de petición
