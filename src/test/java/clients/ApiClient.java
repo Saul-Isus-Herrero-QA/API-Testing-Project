@@ -64,5 +64,12 @@ public class ApiClient {
                 .log().all() // registra respuesta
                 .extract().response(); // extrae respuesta
     }
+    public Response getWithStatusCode(String endpoint, int statusCode) {
+        Response response = given()
+                .when()
+                .get(endpoint);
+        response.then().statusCode(statusCode);
+        return response;
+    }
 
 }
