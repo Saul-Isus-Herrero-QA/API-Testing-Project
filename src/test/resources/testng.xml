@@ -11,6 +11,7 @@
             <class name="tests.PostApiTest"/>
             <class name="tests.DataDrivenPostTest"/>
             <class name="tests.HeaderManagerTest"/>
+            <class name="tests.CookiesManagerTest"/>
         </classes>
     </test>
 </suite>
