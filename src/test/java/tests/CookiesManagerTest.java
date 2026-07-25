@@ -101,7 +101,7 @@ public class CookiesManagerTest {
         // Verifica que la cookie se reporta cómo expirada
         Assert.assertTrue(
                 cookiesManager.isCookieExpired("AUTH_COOKIE"),
-                "Cookie should be marked as expired"
+                "La cookie debe ser marcada como expirada"
         );
     }
 }
