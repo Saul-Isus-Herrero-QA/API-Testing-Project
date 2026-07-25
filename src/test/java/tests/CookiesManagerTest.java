@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import java.time.LocalDateTime;
 import utils.CookiesManager;
+import io.qameta.allure.*;
 
 public class CookiesManagerTest {
 
